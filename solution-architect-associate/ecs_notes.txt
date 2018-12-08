@@ -1,0 +1,12 @@
+ECS
+
+- schedules the placement of containers based on resource needs, isolation policies, and availability.
+- you don't need to worry about cluster management
+
+ECR
+- ECS container registry is a managed AWS Docker registry
+- can use Docker CLI to push, pull and manage images.
+
+ECS Task definition
+- JSON file that describes 1 or more containers
+- includes: docker image ; CPU & mem ; linking of containers

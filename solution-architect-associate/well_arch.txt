@@ -1,0 +1,91 @@
+Well-architected Framework
+
+5 pillars
+- security, reliability, performance, cost, operational excellence.
+
+General design principles
+- stop guessing capacity
+- test at production scale
+- automate to make experimentation easier
+- allow for evolutionary changes
+- data-driven architectures
+- improve through game days.
+
+Security
+- data protection:
+    * How are you encrypting/protecting data at rest
+    * ..         ..          ..          ..  in transit
+- privilege management
+    * How are you protecting the root account
+    * how are you defining roles & responsibilities?
+    * How are you limiting automated access
+- infrastructure protection
+    * How are you enforcing network/host level boundary protections?
+    * How are you enforcing service level protection?
+    * How are you protecting the operating systems?
+- detective controls.
+    * How are you capturing and protecting logs?
+
+Reliability
+- foundations
+    * How are you managing service limits
+    * How are you planning your network topology
+    * Do you have an escalation path?
+- change management
+    * How does your system adapt to changes in demand?
+    * How are you monitoring your AWS resources?
+    * What is your change management
+- failure management
+    * How are you backing up your data
+    * How does your system withstand component failure
+    * How are you planning for recovery
+
+Performance
+- Compute
+    * How to select appropriate instance type
+    * How to keep having the appropriate instance type as new features are introduced
+    * How to monitor your instances
+    * How to ensure quantity of instances matches demand
+- Storage
+    * How to you know you selected the best storage solution
+    * How to keep having the best storage solution
+    * How to monitor your storage
+    * How to ensure capacity and throughput of storage matches demand
+- Database
+    * ... database
+    * ... database
+    * ... database
+    * ... database
+- Space-time tradeoff
+    * ... proximity and caching
+    * ... proximity and caching
+    * ... proximity and caching
+    * ... proximity and caching
+
+Cost
+- Match supply and demand
+    * How to ensure capacity matches but does not substantially exceed demand?
+    * How to optimize usage of the services
+- Cost effeictiveness
+    * Have you selected the appropriate resource types to meet your cost targets
+    * Have you selected the appropriate pricing model
+    * Are there managed services that you can use to increase your ROI?
+- Expenditure awareness
+    * What access controls to govern AWS costs
+    * How are you monitoring usage and spending
+    * How do you decommission resources no longer needed
+    * How do you consider data transfer charges
+- Optimizing over time
+    * How do you manage and/or consider the adoption of new services?
+
+Operational Excellence
+- Preparation
+    * What best practices for cloud operations are you using?
+    * How are you doing config management?
+- Operations
+    * How are you evolving your workload while minimising the impact of change
+    * How do you do monitoring
+- Responses
+    * How do you respond to unplanned operational events
+    * How is escalation managed when responding to unplanned operational events
+

@@ -1,0 +1,40 @@
+SQS
+
+- messages are 256KB
+- queued for 1 min to 14 days (default 4 days)
+- guaranteed delivery
+
+standard queues
+- best effort ordering, message delivered at least once
+
+FIFO queues
+- good for banking transactions. Ordering guaranteed, no duplicates.
+
+SQS Visibility Timeout
+- could result in a message being delivered twice
+- default 30 seconds
+
+---
+
+Kinesis
+
+What is streaming data?
+
+Generated continuously by thousands of data sources, e.g. social network data, game data, etc.
+
+Kinesis is a platform to send streaming data to. 
+
+3 services:
+- Kinesis Streams
+- Kinesis Firehose
+- Kinesis Analytics
+
+Producers => Streams => Consumers => Store e.g. EMR, Redshift etc
+
+OR
+
+Producers => Firehose => S3
+
+Main difference, Firehose is more automated.
+
+Kinesis Analytics allows SQL queries on Kinesis Streams.

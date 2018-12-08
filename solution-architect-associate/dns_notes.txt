@@ -1,0 +1,33 @@
+DNS
+
+Alias records:
+- ELBs do not have IPv4 addresses. Due to Amazon magic and Alias records.
+- Aliases can be used for "naked domain names" or "domain apex" and CNAMEs can't.
+
+Weighting policies:
+- Simple Routing
+- Wighted Routing
+- Latency-based Routing
+- Failover Routing
+- Geolocation Routing
+- Multi-value Routing
+
+Simple
+- (Default) Best for 1 resource for 1 function e.g. 1 webserver.
+
+Weighted
+- Set static weights on all routes.
+- Used for Blue/Green.
+
+Latency
+- Allow the latency of the connection to determine the route.
+
+Failover
+- Set up Active/Passive routing. Active always used unless there's an outage on that link.
+- Uses a Health Check to determine if the link is alive.
+
+Geolocation
+- Route all requests to a local resource based on the requester's geolocation.
+- Recommended to create a default record set.
+
+Multi-value 

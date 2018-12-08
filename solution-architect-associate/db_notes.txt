@@ -1,0 +1,145 @@
+Databases
+
+RDS - OLTP
+- SQL
+- MySQL
+- PostgreSQL
+- Oracle
+- Aurora
+- MariaDB
+DynamoDB - NoSQL
+RedShift - OLAP
+ElastiCache - In memory caching
+
+Backups
+- Automated
+- Database Snapshots
+
+Automated
+- return database to a point-in-time within a "retention period" (1-35 days)
+- daily snapshots + transaction logs throughout the day to within 1 second.
+- stored in S3 with free storage equal to the size of your DB.
+- enabled by default
+- backups happen within a defined window. expect increased latency during the backup window.
+
+Snapshots
+- always user-initiated
+- persist even after the RDS instance is deleted, unlike automated backups.
+
+Restoring
+- a completely new RDS instance with a new DNS endpoint.
+
+Encryption
+- at rest supported by: MySQL, Oracle, SQL Server, PostgreSQL, MariaDB & Aurora.
+- uses KMS.
+- data & backups are then encrypted at rest.
+
+To encrypt an existing RDS instance:
+- create snapshot, copy it, encrypt the copy.
+
+Multi-AZ
+- exact copy of DB in another AZ
+- AWS handles replication
+- automatic failover
+- for DR only, not performance improvement.
+- available for: SQL Server, Oracle, MySQL Server, PostgreSQL, MariaDB, (also Aurora).
+
+Read replicas
+- read replicas up to 5 by default
+- can also have read replicas of replicas in other AZs or even other regions.
+- available for: MySQL Server, PostgreSQL, MariaDB, (Aurora).
+- performance improvement, not for DR.
+- must have automatic backups on.
+- each replica has its own DNS endpoint.
+- read replicas CAN have Multi-AZ enabled (new feature).
+- can create read replicas of Multi-AZ source databases.
+- read replica can be promoted but this breaks replication.
+
+---
+
+DynamoDB
+
+Fast - single-digit millisecond latency. 
+Supports document and key-value.
+
+Stored on SSD storage. Spread across 3 "geographically distinct data centres" - for some reasons, they won't say across 3 AZs.
+
+Consistency models:
+- eventual consistent reads. Usually within 1 second.
+- strongly consistent reads.
+
+Pricing model is complicated
+
+DynamoDB Streams:
+"DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table, and stores this information in a log for up to 24 hours."
+
+---
+
+Redshift
+
+Columnar storage also == NoSQL
+
+"Data warehousing is really about adding up columns" "columnar data storage"
+
+Single node - 160GB
+Multi-node
+- leader node
+- up to 128 compute nodes
+
+Columnar storage: columns stored sequentially improving read time.
+Columnar compression - 10 times faster: compression also works better if you assume data is sequential.
+MPP - massive parallel processing. data auto-distributed.
+
+Pricing complicated.
+
+Security:
+- encrypted in transit using SSL
+- at rest using AES-256
+- takes care of key management (default) OR bring your own keys OR KMS
+
+NOT Multi-AZ.
+
+Enhanced VPC Routing.
+https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html
+
+When you provision an Amazon Redshift cluster, it is locked down by default so nobody has access to it. To grant other users inbound access to an Amazon Redshift cluster, you associate the cluster with a security group.
+
+---
+
+ElastiCache
+
+In-memory cache
+
+Types:
+
+Memcached
+- protocol-compliant with memcached
+
+Redis
+
+Exam tips:
+- ElastiCache is a good choice in read-heavy infrequently changing workloads.
+- Redshift better if stress is caused by lots of OLAP transactions.
+
+Good choice for storing session data.
+
+---
+
+Aurora
+
+"Combines speed and availability of high-end commercial DBs with simplicity and cost of open source. 5 times faster than MySQL / 1/10th as expensive as Oracle"
+
+Features
+- starts at 10GB, auto-provisions, scales in 10GB increments up to 64TB.
+- scales up to 32 vCPUs and 244GB mem
+- 2 copies of the data in each AZ minimum 3 AZ ie 6 copies.
+- handles loss of 2 copies without affecting read capability.
+- self-healing.
+
+Replicas
+- Aurora replicas up to 15 - failover to these is auto, not the same with MySQL read reps
+- up to 5 MySQL read replicas
+
+Since 2016 supports cross-region replication:
+https://aws.amazon.com/about-aws/whats-new/2016/06/amazon-aurora-now-supports-cross-region-replication/
+

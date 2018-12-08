@@ -1,0 +1,101 @@
+Create VPC
+
+Auto-creates:
+- Route Table
+- Network ACL
+- Security Group
+
+Must then create subnets per AZ.
+
+Then create IGW.
+- note only 1 IGW per VPC is possible.
+
+Every subnet by default is associated with the main route table.
+Therefore, the main route table should not access the Internet.
+
+Create an Internet-facing route table: 0.0.0.0/0 => IGW.
+
+DNS Names
+- enableDnsHostnames: false by default
+
+VPCs can be extended by associating a secondary CIDR since Aug 2017. This leads to a second entry for local in the main route table.
+
+---
+
+NAT Instance (deprecated)
+- Just launch an EC2 instance and put it in a SG.
+- Disable src/dst check.
+- Create a route out of the PRIVATE subnet from default route table via NAT instance in the PUBLIC subet: 0.0.0.0/0 => NAT instance.
+
+Note that the NAT instance is a SPOF. Note also that the INSTANCE TYPE can be a bottleneck.
+
+HA can be made via ASGs + multiple subnets in AZs + script to automate failover.
+
+---
+
+NAT Gateway
+- NAT Gateway: IPv4
+- egress only Gateway: IPv6
+- Note it is auto-assigned a public IP (EIP).
+- Create a route out from default route table via NAT gateway: 0.0.0.0/0 => NAT gateway.
+
+Features:
+- Scale up to 10Gbps.
+- Not associated with a SG.
+
+NAT Gateway v IGW.
+- IGWs are for 2-way traffic, NAT Gateways are for egress-only.
+
+NAT Gateways do NOT have security groups.
+
+---
+
+NACLs
+
+Default ACL in a VPC allows all in/out bound.
+Custom ACL by default denies all in/out bound.
+Each Subnet is associated with exactly one ACL, by default the default ACL.
+Stateless == every request subject to rules for in/out bound.
+
+---
+
+ALBs
+
+ALB must be in at least 2 public subnets.
+
+---
+
+VPC Flow Logs
+
+Captures all IP traffic to/from NICs in your VPC.
+Data is available in Cloudwatch.
+
+Can be created at 3 levels:
+- VPC
+- Subnet
+- NIC level
+
+Your VPCs > Actions > Create Flow Log
+
+These can be streamed to Lambda or Amazon Elasticsearch service.
+
+Flow Logs cannot be enabled for a peered VPC unless it is in your account.
+Cannot tag a Flow Log.
+You cannot change a Flow Log's configuration.
+Not all traffic is monitored, e.g. DNS traffic, DHCP traffic, Windows License activation traffic, 169.254.169.254 traffic, traffic to the reserved IP of VPC router
+
+---
+
+VPC End Points
+
+Comes in 2 varieties:
+- Interface end points
+- Gateway end points
+
+Limitations:
+- VPC End Points do not support cross-region S3 requests. VPC & S3 must be in the same region.
+- Only IPv4.
+- You cannot use a prefix list ID in an outbound rule in a network ACL to allow or deny outbound traffic to the service specified in an endpoint.
+- You can't tag an endpoint.
+
+They have a policy by default that allows all actions on all S3 buckets.
