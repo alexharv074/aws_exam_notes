@@ -95,6 +95,8 @@ Less efficient than a Query.
 
 ## Provisioned throughput
 
+Using the AWS portal, you are trying to Scale DynamoDB past its preconfigured maximums. You can increase provisioned throughput limits by raising a ticket to AWS support.
+
 ### Read throughput
 
 Magic formula:
@@ -128,4 +130,21 @@ Writes always 1KB in size and 1 write per second.
 
 ### exceed provisioned throughput
 
-HTTP 400 and *ProvsionedThroughputExceededException*
+HTTP 400 and *ProvsionedThroughputExceededException*.
+
+## Conditional write
+
+To prevent a race condition where two users write to the same item with different values at the same time. Conditional writes are *idempotent*.
+
+## Atomic counters
+
+Increment a counter no matter what using the *UpdateItem* operation. These are not idempotent.
+
+## Batch operations
+
+Use *BatchGetItem*, can return up to 16MB of data / 100 items. Note no s.
+
+## Other stuff
+
+- Maximum size of a shard
+- Maximum amount of data per primary key

@@ -56,7 +56,7 @@ The AWS sign-in endpoint for SAML is https://signin.aws.amazon.com/saml
 
 SAML stands for Security Assertion Markup Language.
 
-Remember API call is named AssumeRoleWithSAML.
+Remember API call is named `AssumeRoleWithSAML`.
 
 ---
 
@@ -70,8 +70,8 @@ Flow:
 2. Use that token to obtain Temporary Security Credentials from AWS. Provider ID = graph.facebook.com RoleArn = arn:aws:iam::877950674958:role/WebIdFed_Facebook Role Session Name web-identity-federation
 3. Access AWS with access key and secret key.
 
-> A user authenticates with facebook first. They are then given an ID token by facebook. An API call, AssumeRoleWithWebIdentity, is then used in conjunction with the ID token. A user is then granted temporary security credentials.
+> A user authenticates with facebook first. They are then given an ID token by facebook. An API call, `AssumeRoleWithWebIdentity`, is then used in conjunction with the ID token. A user is then granted temporary security credentials.
 
-Remember API call is named AssumeRoleWithWebIdentity.
+Remember API call is named `AssumeRoleWithWebIdentity`.
 
 ---
