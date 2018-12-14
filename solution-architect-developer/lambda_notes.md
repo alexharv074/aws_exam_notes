@@ -37,3 +37,8 @@ Duration:
 - S3
 - SNS
 
+## Best practices
+
+https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
+
+- Avoid using recursive code in your Lambda function, wherein the function automatically calls itself until some arbitrary criteria is met.
