@@ -38,3 +38,7 @@ Producers => Firehose => S3
 Main difference, Firehose is more automated.
 
 Kinesis Analytics allows SQL queries on Kinesis Streams.
+
+Can preprocess data using Lambda:
+
+https://aws.amazon.com/blogs/big-data/preprocessing-data-in-amazon-kinesis-analytics-with-aws-lambda/
