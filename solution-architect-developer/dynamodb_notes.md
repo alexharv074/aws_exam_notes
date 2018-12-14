@@ -45,6 +45,12 @@ Free tier:
 - 25 Read Capacity Units
 - 25 Write Capacity Units
 
+## Items
+
+### TTL
+
+Time To Live (TTL) for DynamoDB allows you to define when items in a table expire so that they can be automatically deleted from the database.
+
 ## Indexes and Streams
 
 Primary keys
