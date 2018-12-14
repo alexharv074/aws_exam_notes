@@ -182,3 +182,9 @@ Creates a new item, or replaces an old item with a new item.
 
 - Maximum size of a shard
 - Maximum amount of data per primary key
+
+## Encryption of tables
+
+Amazon DynamoDB offers fully managed encryption at rest. DynamoDB encryption at rest provides enhanced security by encrypting all your data at rest using encryption keys stored in AWS Key Management Service (AWS KMS). This functionality helps reduce the operational burden and complexity involved in protecting sensitive data. With encryption at rest, you can build security-sensitive applications that meet strict encryption compliance and regulatory requirements.
+
+Encrypt at time of table creation.
