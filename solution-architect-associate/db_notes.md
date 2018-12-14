@@ -1,50 +1,63 @@
 # Databases
 
-RDS - OLTP
+## RDS
+
+OLTP
+
+### Database types
+
 - SQL
 - MySQL
 - PostgreSQL
 - Oracle
 - Aurora
 - MariaDB
+
 DynamoDB - NoSQL
 RedShift - OLAP
-ElastiCache - In memory caching
 
-Backups
+### Backups
+
 - Automated
 - Database Snapshots
 
-Automated
+### Automated
+
 - return database to a point-in-time within a "retention period" (1-35 days)
 - daily snapshots + transaction logs throughout the day to within 1 second.
 - stored in S3 with free storage equal to the size of your DB.
 - enabled by default
 - backups happen within a defined window. expect increased latency during the backup window.
 
-Snapshots
+### Snapshots
+
 - always user-initiated
 - persist even after the RDS instance is deleted, unlike automated backups.
 
-Restoring
+### Restoring
+
 - a completely new RDS instance with a new DNS endpoint.
 
-Encryption
+### Encryption
+
 - at rest supported by: MySQL, Oracle, SQL Server, PostgreSQL, MariaDB & Aurora.
 - uses KMS.
 - data & backups are then encrypted at rest.
 
 To encrypt an existing RDS instance:
+
 - create snapshot, copy it, encrypt the copy.
 
-Multi-AZ
+### Multi-AZ
+
 - exact copy of DB in another AZ
 - AWS handles replication
 - automatic failover
 - for DR only, not performance improvement.
 - available for: SQL Server, Oracle, MySQL Server, PostgreSQL, MariaDB, (also Aurora).
 
-Read replicas
+### Read replicas
+
 - read replicas up to 5 by default
 - can also have read replicas of replicas in other AZs or even other regions.
 - available for: MySQL Server, PostgreSQL, MariaDB, (Aurora).
@@ -55,25 +68,9 @@ Read replicas
 - can create read replicas of Multi-AZ source databases.
 - read replica can be promoted but this breaks replication.
 
----
-
 # DynamoDB
 
-Fast - single-digit millisecond latency. 
-Supports document and key-value.
-
-Stored on SSD storage. Spread across 3 "geographically distinct data centres" - for some reasons, they won't say across 3 AZs.
-
-Consistency models:
-- eventual consistent reads. Usually within 1 second.
-- strongly consistent reads.
-
-Pricing model is complicated
-
-DynamoDB Streams:
-"DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table, and stores this information in a log for up to 24 hours."
-
----
+See [here](./solution-architect-developer/dynamodb_notes.md).
 
 # Redshift
 
@@ -104,8 +101,6 @@ https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html
 
 When you provision an Amazon Redshift cluster, it is locked down by default so nobody has access to it. To grant other users inbound access to an Amazon Redshift cluster, you associate the cluster with a security group.
 
----
-
 # ElastiCache
 
 In-memory cache
@@ -130,9 +125,7 @@ https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html
 - Write through: The write through strategy adds data or updates data in the cache whenever data is written to the database.
 - Adding TTL: Lazy loading allows for stale data, but won't fail with empty nodes. Write through ensures that data is always fresh, but may fail with empty nodes and may populate the cache with superfluous data. By adding a time to live (TTL) value to each write, we are able to enjoy the advantages of each strategy and largely avoid cluttering up the cache with superfluous data.
 
----
-
-Aurora
+# Aurora
 
 "Combines speed and availability of high-end commercial DBs with simplicity and cost of open source. 5 times faster than MySQL / 1/10th as expensive as Oracle"
 
@@ -149,4 +142,3 @@ Replicas
 
 Since 2016 supports cross-region replication:
 https://aws.amazon.com/about-aws/whats-new/2016/06/amazon-aurora-now-supports-cross-region-replication/
-

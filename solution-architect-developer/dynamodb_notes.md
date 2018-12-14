@@ -1,5 +1,21 @@
 # DynamoDB
 
+## Associate notes
+
+Fast - single-digit millisecond latency.
+Supports document and key-value.
+
+Stored on SSD storage. Spread across 3 "geographically distinct data centres" - for some reasons, they won't say across 3 AZs.
+
+Consistency models:
+- eventual consistent reads. Usually within 1 second.
+- strongly consistent reads.
+
+Pricing model is complicated
+
+DynamoDB Streams:
+"DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table, and stores this information in a log for up to 24 hours."
+
 ## Quick facts
 
 - SSD
