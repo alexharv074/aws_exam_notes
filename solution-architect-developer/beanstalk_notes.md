@@ -15,6 +15,18 @@ Know all the languages.
 
 ## Deployment policies
 
+Deployment policy – Choose from the following deployment options:
+
+- All at once – Deploy the new version to all instances simultaneously. All instances in your environment are out of service for a short time while the deployment occurs.
+
+- Rolling – Deploy the new version in batches. Each batch is taken out of service during the deployment phase, reducing your environment's capacity by the number of instances in a batch.
+
+- Rolling with additional batch – Deploy the new version in batches, but first launch a new batch of instances to ensure full capacity during the deployment process.
+
+- Immutable – Deploy the new version to a fresh group of instances by performing an immutable update.
+
+Blue/green deployments require that your environment runs independently of your production database, if your application uses one. If your environment has an Amazon RDS DB instance attached to it, the data will not transfer over to your second environment, and will be lost if you terminate the original environment.
+
 ## Configuring
 
 Change instance type on a running config. Create a config file in S3 with instance type use the same during instance creation. Confusing! Is this right? But you can't use the configuration details page to change a running config.
