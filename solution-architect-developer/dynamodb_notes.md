@@ -144,6 +144,10 @@ Increment a counter no matter what using the *UpdateItem* operation. These are n
 
 Use *BatchGetItem*, can return up to 16MB of data / 100 items. Note no s.
 
+## PutItem
+
+Creates a new item, or replaces an old item with a new item.
+
 ## Other stuff
 
 - Maximum size of a shard
