@@ -123,6 +123,13 @@ Exam tips:
 
 Good choice for storing session data.
 
+Caching strategies:
+https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html
+
+- Lazy loading: As the name implies, lazy loading is a caching strategy that loads data into the cache only when necessary.
+- Write through: The write through strategy adds data or updates data in the cache whenever data is written to the database.
+- Adding TTL: Lazy loading allows for stale data, but won't fail with empty nodes. Write through ensures that data is always fresh, but may fail with empty nodes and may populate the cache with superfluous data. By adding a time to live (TTL) value to each write, we are able to enjoy the advantages of each strategy and largely avoid cluttering up the cache with superfluous data.
+
 ---
 
 Aurora
