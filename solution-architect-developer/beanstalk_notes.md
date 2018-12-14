@@ -13,3 +13,8 @@ Know all the languages.
 
 - PHP, Python, Node.js, Ruby, .NET, Java, Go.
 
+## Deployment policies
+
+## Configuring
+
+Change instance type on a running config. Create a config file in S3 with instance type use the same during instance creation. Confusing! Is this right? But you can't use the configuration details page to change a running config.
