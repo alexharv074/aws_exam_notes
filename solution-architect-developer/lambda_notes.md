@@ -1,5 +1,7 @@
 # Lambda
 
+## Summary
+
 Can use Lambda in 2 ways:
 
 - event-driven compute service: code runs in response to events.
@@ -7,14 +9,14 @@ Can use Lambda in 2 ways:
 
 User => API Gateway => 1 Lambda function - scales automatically ; every user gets their own Lambda function.
 
-Languages:
+## Languages
 
 - Node
 - Java
 - Python
 - C#
 
-Lambda pricing:
+## Pricing
 
 Number of requests:
 - First million requests are free. $0.2 for every request after.
@@ -22,7 +24,7 @@ Number of requests:
 Duration:
 - Execution time to the nearest 100ms. $0.00001667 per GB-second.
 
-Triggers:
+## Triggers
 
 - API Gateway
 - AWS IoT
