@@ -57,6 +57,8 @@ Encryption at rest:
 
 > In order to enable encryption at rest using EC2 and EBS, you must configure encryption when creating the EBS volume.
 
+It uses a Customer Master Key (CMKs).
+
 # Security Group
 
 An SG is a virtual firewall.
