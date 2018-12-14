@@ -1,4 +1,4 @@
-Databases
+# Databases
 
 RDS - OLTP
 - SQL
@@ -57,7 +57,7 @@ Read replicas
 
 ---
 
-DynamoDB
+# DynamoDB
 
 Fast - single-digit millisecond latency. 
 Supports document and key-value.
@@ -75,7 +75,7 @@ DynamoDB Streams:
 
 ---
 
-Redshift
+# Redshift
 
 Columnar storage also == NoSQL
 
@@ -106,7 +106,7 @@ When you provision an Amazon Redshift cluster, it is locked down by default so n
 
 ---
 
-ElastiCache
+# ElastiCache
 
 In-memory cache
 
