@@ -14,6 +14,12 @@ Consists of:
 
 Temporary access to AWS resources
 
+`AssumeRole()`: To assume a role, an application calls the AWS STS AssumeRole API operation and passes the ARN of the role to use.
+
+`GetSessionToken()`: Returns a set of temporary credentials for an AWS account or IAM user. The credentials consist of an access key ID, a secret access key, and a security token. Typically, you use GetSessionToken if you want to use MFA to protect programmatic calls to specific AWS API operations
+
+https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html
+
 Federation (typically with AD)
 - uses SAML
 - temporary access based on the AD creds. No need to be an IAM user
