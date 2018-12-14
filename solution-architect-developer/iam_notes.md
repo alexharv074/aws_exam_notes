@@ -81,3 +81,16 @@ Flow:
 Remember API call is named `AssumeRoleWithWebIdentity`.
 
 ---
+
+# Cognito
+
+## User pools
+
+User pools provide:
+
+- Sign-up and sign-in services.
+- A built-in, customizable web UI to sign in users.
+- Social sign-in with Facebook, Google, and Login with Amazon, as well as sign-in with SAML identity providers from your user pool.
+- User directory management and user profiles.
+- Security features such as multi-factor authentication (MFA), checks for compromised credentials, account takeover protection, and phone and email verification.
+- Customized workflows and user migration through AWS Lambda triggers.
