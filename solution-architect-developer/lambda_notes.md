@@ -47,6 +47,10 @@ https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
 
 Can be used to designate the environment (test, dev etc) for the function. See also https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
 
+## AWS X-Ray
+
+AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.
+
 # API Gateway
 
 ## Set up API Methods in API Gateway
