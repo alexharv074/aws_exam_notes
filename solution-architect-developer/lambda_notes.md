@@ -42,3 +42,7 @@ Duration:
 https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
 
 - Avoid using recursive code in your Lambda function, wherein the function automatically calls itself until some arbitrary criteria is met.
+
+## Environment variables
+
+Can be used to designate the environment (test, dev etc) for the function. See also https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
