@@ -17,3 +17,15 @@ Store a build spec file somewhere other than the root of your source directory, 
 ### Parameters
 
 - `buildspecOverride`: Optional string. A build spec declaration that overrides for this build the one defined in the build project. If this value is set, it can be either an inline build spec definition or the path to an alternate build spec file relative to the value of the built-in CODEBUILD_SRC_DIR environment variable.
+
+# AWS CodePipeline
+
+## Configuration
+
+### Security
+
+There are two ways to configure server-side encryption for Amazon S3 artifacts:
+
+- AWS CodePipeline creates an Amazon S3 artifact bucket and default AWS-managed SSE-KMS encryption keys when you create a pipeline using the Create Pipeline wizard. The master key is encrypted along with object data and managed by AWS.
+
+- You can create and manage your own customer-managed SSE-KMS keys.
