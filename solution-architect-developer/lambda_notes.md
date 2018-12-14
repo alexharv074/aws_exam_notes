@@ -47,6 +47,16 @@ https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
 
 Can be used to designate the environment (test, dev etc) for the function. See also https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
 
+## Step functions
+
+AWS Step Functions is a web service that enables you to coordinate the components of distributed applications and microservices using visual workflows. You build applications from individual components that each perform a discrete function, or task, allowing you to scale and change applications quickly. Step Functions provides a reliable way to coordinate components and step through the functions of your application. Step Functions provides a graphical console to visualize the components of your application as a series of steps. It automatically triggers and tracks each step, and retries when there are errors, so your application executes in order and as expected, every time. Step Functions logs the state of each step, so when things do go wrong, you can diagnose and debug problems quickly.
+
+Here are some of the key features of AWS Step Functions:
+
+- Step Functions is based on the concepts of tasks and state machines.
+- You define state machines using the JSON-based Amazon States Language.
+- The Step Functions console displays a graphical view of your state machine's structure, which provides you with a way to visually check your state machine's logic and monitor executions.
+
 ## AWS X-Ray
 
 AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.
