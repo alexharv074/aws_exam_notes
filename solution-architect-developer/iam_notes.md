@@ -8,7 +8,10 @@ Consists of:
 - roles
 - policy documents: these are JSON docs that can be applied to: users, groups or roles.
 
----
+## Conditions in policies
+
+The Condition element (or Condition block) lets you specify conditions for when a policy is in effect.
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html
 
 # STS
 
