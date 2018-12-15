@@ -97,3 +97,7 @@ User pools provide:
 - User directory management and user profiles.
 - Security features such as multi-factor authentication (MFA), checks for compromised credentials, account takeover protection, and phone and email verification.
 - Customized workflows and user migration through AWS Lambda triggers.
+
+## Streams
+
+Cognito Streams gives developers control and insight into their data stored in Amazon Cognito. Developers can now configure a Kinesis stream to receive events as data is updated and synchronized. Amazon Cognito can push each dataset change to a Kinesis stream you own in real time.
