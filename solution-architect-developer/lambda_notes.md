@@ -61,6 +61,10 @@ Here are some of the key features of AWS Step Functions:
 
 AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.
 
+## Lambda@Edge
+
+Lambda@Edge is an extension of AWS Lambda, a compute service that lets you execute functions that customize the content that CloudFront delivers.
+
 # API Gateway
 
 ## Set up API Methods in API Gateway
