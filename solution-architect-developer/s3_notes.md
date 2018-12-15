@@ -140,6 +140,16 @@ Client-side:
 
 You encrypt the data on your side then upload it.
 
+You can specify a condition in the bucket policy to enforce encryption:
+
+```json
+"Condition": {
+  "StringNotEquals": {
+    "s3:x-amz-server-side-encryption": "aws:kms"
+  }
+}
+```
+
 # Storage Gateway
 
 How to backup data in enterprise?
