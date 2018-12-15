@@ -80,7 +80,11 @@ If you want to enable a user to download your private data directly from S3, you
 
 # Cross origin resource sharing (CORS)
 
-Not sure what I need to know yet.
+The following are example scenarios for using CORS:
+
+- Scenario 1: Suppose that you are hosting a website in an S3 bucket. Your users load the static content in S3 bucket A. Now you want to use JavaScript on the webpages that are stored in this bucket to be able to make authenticated GET and PUT requests against the same bucket by using the S3 API endpoint for the bucket, S3 bucket B. A browser would normally block JavaScript from allowing those requests, but with CORS you can configure your bucket to explicitly enable cross-origin requests from website.s3-website-us-east-1.amazonaws.com.
+
+- Scenario 2: Suppose that you want to host a web font from your S3 bucket. Again, browsers require a CORS check (also called a preflight check) for loading web fonts. You would configure the bucket that is hosting the web font to allow any origin to make these requests.
 
 > You are hosting a static website in an S3 bucket that uses Java script to reference assets in another S3 bucket. For some reason, these assets are not displaying when users browse to the site. What could be the problem? A: CORS not enabled.
 
