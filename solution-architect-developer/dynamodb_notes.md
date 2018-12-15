@@ -35,6 +35,11 @@ Pricing:
 - write throughput $0.0065 / hour for every 10 units
 - read throughput $0.0065 / hour for every 50 units
 
+Schemaless:
+
+Key difference between NoSQL and SQL
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.html
+
 First 25GB per month is free.
 $0.25GB per month thereafter.
 
