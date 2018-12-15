@@ -134,6 +134,10 @@ Determines the read consistency model: If set to true, then the operation uses s
 Scan examines every item in the table. But can use *ProjectionExpression* to limit it.
 Less efficient than a Query.
 
+### Reduced page size
+
+Because a Scan operation reads an entire page (by default, 1 MB), you can reduce the impact of the scan operation by setting a smaller page size.
+
 ## Provisioned throughput
 
 Using the AWS portal, you are trying to Scale DynamoDB past its preconfigured maximums. You can increase provisioned throughput limits by raising a ticket to AWS support.
