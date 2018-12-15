@@ -50,6 +50,8 @@ Free tier:
 - 25 Read Capacity Units
 - 25 Write Capacity Units
 
+Along with ElastiCache, a good choice for storing session data (DynamoDB Session Handler).
+
 ## Items
 
 ### TTL
