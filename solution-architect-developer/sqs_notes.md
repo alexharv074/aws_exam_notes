@@ -1,5 +1,7 @@
 # SQS
 
+SQS offers a secure, durable, and available hosted queue that lets you integrate and decouple distributed software systems and components.
+
 SQS was the very first service on the AWS platform.
 
 - messages are 256KB
