@@ -29,3 +29,7 @@ There are two ways to configure server-side encryption for Amazon S3 artifacts:
 - AWS CodePipeline creates an Amazon S3 artifact bucket and default AWS-managed SSE-KMS encryption keys when you create a pipeline using the Create Pipeline wizard. The master key is encrypted along with object data and managed by AWS.
 
 - You can create and manage your own customer-managed SSE-KMS keys.
+
+# AWS CodeStar
+
+AWS CodeStar is a cloud-based service for creating, managing, and working with software development projects on AWS. You can quickly develop, build, and deploy applications on AWS with an AWS CodeStar project. An AWS CodeStar project creates and integrates AWS services for your project development toolchain.
