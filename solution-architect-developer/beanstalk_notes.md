@@ -30,3 +30,7 @@ Blue/green deployments require that your environment runs independently of your 
 ## Configuring
 
 Change instance type on a running config. Create a config file in S3 with instance type use the same during instance creation. Confusing! Is this right? But you can't use the configuration details page to change a running config.
+
+## Custom platform
+
+You create your own Elastic Beanstalk platform using Packer, which is an open-source tool for creating machine images for many platforms, including AMIs for use with Amazon EC2.
