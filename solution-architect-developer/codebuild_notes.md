@@ -30,6 +30,12 @@ There are two ways to configure server-side encryption for Amazon S3 artifacts:
 
 - You can create and manage your own customer-managed SSE-KMS keys.
 
+# AWS CodeDeploy
+
+## AppSpec file
+
+An application specification file (AppSpec file), which is unique to AWS CodeDeploy, is a YAML-formatted or JSON-formatted file. The AppSpec file is used to manage each deployment as a series of lifecycle event hooks, which are defined in the file.
+
 # AWS CodeStar
 
 AWS CodeStar is a cloud-based service for creating, managing, and working with software development projects on AWS. You can quickly develop, build, and deploy applications on AWS with an AWS CodeStar project. An AWS CodeStar project creates and integrates AWS services for your project development toolchain.
