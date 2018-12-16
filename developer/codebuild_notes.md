@@ -1,3 +1,9 @@
+# AWS CodeCommit
+
+## Cross-account access
+
+You can configure access to AWS CodeCommit repositories for IAM users and groups in another AWS account. This is often referred to as cross-account access.
+
 # AWS Codebuild
 
 ## Overview
