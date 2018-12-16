@@ -61,7 +61,13 @@ Here are some of the key features of AWS Step Functions:
 - You define state machines using the JSON-based Amazon States Language.
 - The Step Functions console displays a graphical view of your state machine's structure, which provides you with a way to visually check your state machine's logic and monitor executions.
 
-## AWS X-Ray
+## Debugging
+
+### Logging statements
+
+You can insert logging statements into your code to help you validate that your code is working as expected. Lambda automatically integrates with Amazon CloudWatch Logs and pushes all logs from your code to a CloudWatch Logs group associated with a Lambda function (/aws/lambda/<function name>).
+
+### AWS X-Ray
 
 AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.
 
