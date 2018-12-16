@@ -134,6 +134,10 @@ Determines the read consistency model: If set to true, then the operation uses s
 Scan examines every item in the table. But can use *ProjectionExpression* to limit it.
 Less efficient than a Query.
 
+### Parallel scan
+
+By default, the Scan operation processes data sequentially. DynamoDB returns data to the application in 1 MB increments, and an application performs additional Scan operations to retrieve the next 1 MB of data.
+
 ### Reduced page size
 
 Because a Scan operation reads an entire page (by default, 1 MB), you can reduce the impact of the scan operation by setting a smaller page size.

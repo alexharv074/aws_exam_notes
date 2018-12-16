@@ -129,6 +129,10 @@ https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html
 - Write through: The write through strategy adds data or updates data in the cache whenever data is written to the database.
 - Adding TTL: Lazy loading allows for stale data, but won't fail with empty nodes. Write through ensures that data is always fresh, but may fail with empty nodes and may populate the cache with superfluous data. By adding a time to live (TTL) value to each write, we are able to enjoy the advantages of each strategy and largely avoid cluttering up the cache with superfluous data.
 
+## Redis sorted sets
+
+Leaderboards, such as the Top 10 scores for a game, are computationally complex, especially with a large number of concurrent players and continually changing scores. Redis sorted sets guarantee both uniqueness and element ordering.
+
 # Aurora
 
 "Combines speed and availability of high-end commercial DBs with simplicity and cost of open source. 5 times faster than MySQL / 1/10th as expensive as Oracle"
