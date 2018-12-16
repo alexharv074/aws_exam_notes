@@ -117,6 +117,8 @@ Use case for streams:
 
 In-Memory Acceleration with DAX. Amazon DynamoDB is designed for scale and performance. In most cases, the DynamoDB response times can be measured in single-digit milliseconds. However, there are certain use cases that require response times in microseconds. For these use cases, DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data.
 
+Millions of requests per second: DAX provides access to eventually consistent data from DynamoDB tables, with microsecond latency. A multi-AZ DAX cluster can serve millions of requests per second.
+
 ## Scan v Query API call
 
 ### Query
