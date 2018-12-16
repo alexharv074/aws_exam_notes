@@ -32,6 +32,22 @@ There are two ways to configure server-side encryption for Amazon S3 artifacts:
 
 # AWS CodeDeploy
 
+## Lifecycle event hooks
+
+- ApplicationStop
+- DownloadBundle
+- BeforeInstall
+- Install
+- AfterInstall
+- ApplicationStart
+- ValidateService
+- BeforeBlockTraffic
+- BlockTraffic
+- AfterBlockTraffic
+- BeforeAllowTraffic
+- AllowTraffic
+- AfterAllowTraffic
+
 ## AppSpec file
 
 An application specification file (AppSpec file), which is unique to AWS CodeDeploy, is a YAML-formatted or JSON-formatted file. The AppSpec file is used to manage each deployment as a series of lifecycle event hooks, which are defined in the file.
