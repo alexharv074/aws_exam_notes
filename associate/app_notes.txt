@@ -42,3 +42,7 @@ Kinesis Analytics allows SQL queries on Kinesis Streams.
 Can preprocess data using Lambda:
 
 https://aws.amazon.com/blogs/big-data/preprocessing-data-in-amazon-kinesis-analytics-with-aws-lambda/
+
+Encryption:
+
+Server-side encryption is a feature in Amazon Kinesis Data Streams that automatically encrypts data before it's at rest by using an AWS KMS customer master key (CMK) you specify.
