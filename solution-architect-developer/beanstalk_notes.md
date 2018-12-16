@@ -29,6 +29,12 @@ Blue/green deployments require that your environment runs independently of your 
 
 ## Configuring
 
+Elastic Beanstalk supports two methods of saving configuration option settings:
+
+- `.ebextensions`: Configuration files in YAML or JSON format can be included in your application's source code in a directory named .ebextensions and deployed as part of your application source bundle. You create and manage configuration files locally.
+
+- Saved configurations: are templates that you create from a running environment or JSON options file and store in Elastic Beanstalk. Existing saved configurations can also be extended to create a new configuration.
+
 Change instance type on a running config. Create a config file in S3 with instance type use the same during instance creation. Confusing! Is this right? But you can't use the configuration details page to change a running config.
 
 ## Custom platform
