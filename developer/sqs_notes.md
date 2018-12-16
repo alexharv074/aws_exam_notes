@@ -17,6 +17,10 @@ SQS was the very first service on the AWS platform.
 - FIFO queues
     * good for banking transactions. Ordering guaranteed, no duplicates.
 
+## Can't convert
+
+You can't convert an existing standard queue into a FIFO queue. To make the move, you must either create a new FIFO queue for your application or delete your existing standard queue and recreate it as a FIFO queue.
+
 ## SQS Visibility Timeout
 
 - could result in a message being delivered twice
