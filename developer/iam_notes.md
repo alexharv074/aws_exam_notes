@@ -98,6 +98,12 @@ User pools provide:
 - Security features such as multi-factor authentication (MFA), checks for compromised credentials, account takeover protection, and phone and email verification.
 - Customized workflows and user migration through AWS Lambda triggers.
 
+## Identity pools
+
+Cognito identity pools (federated identities) enable you to create unique identities for your users and federate them with identity providers. With an identity pool, you can obtain temporary, limited-privilege AWS credentials to access other AWS services.
+
+Amazon Cognito identity pools provide temporary AWS credentials for users who are guests (unauthenticated) and for users who have been authenticated and received a token. An identity pool is a store of user identity data specific to your account.
+
 ## Streams
 
 Cognito Streams gives developers control and insight into their data stored in Amazon Cognito. Developers can now configure a Kinesis stream to receive events as data is updated and synchronized. Amazon Cognito can push each dataset change to a Kinesis stream you own in real time.
