@@ -46,3 +46,9 @@ https://aws.amazon.com/blogs/big-data/preprocessing-data-in-amazon-kinesis-analy
 Encryption:
 
 Server-side encryption is a feature in Amazon Kinesis Data Streams that automatically encrypts data before it's at rest by using an AWS KMS customer master key (CMK) you specify.
+
+Shards:
+
+A shard is a uniquely identified sequence of data records in a stream. A stream is composed of one or more shards, each of which provides a fixed unit of capacity.
+
+You can guarantee ordering within a shard but not across multiple shards.
