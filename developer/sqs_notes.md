@@ -8,14 +8,14 @@ SQS was the very first service on the AWS platform.
 - queued for 1 min to 14 days (default 4 days)
 - guaranteed delivery
 
-## standard queues
+## Types of queues
 
-- best effort ordering, message delivered at least once
-- can be delivered multiple times and in any order.
+- standard queues:
+    * best effort ordering, message delivered at least once
+    * can be delivered multiple times and in any order.
 
-## FIFO queues
-
-- good for banking transactions. Ordering guaranteed, no duplicates.
+- FIFO queues
+    * good for banking transactions. Ordering guaranteed, no duplicates.
 
 ## SQS Visibility Timeout
 
