@@ -94,9 +94,9 @@ The following steps outline how to build a serverless application using AWS SAM:
 
 - Test Locally. Test the application locally using sam local invoke and/or sam local start-api. Note that with these commands, even though your Lambda function is invoked locally, it reads from and writes to AWS resources in the AWS Cloud.
 
-- Package. When you're satisfied with your Lambda function, bundle the Lambda function, AWS SAM template, and any dependencies into an AWS CloudFormation deployment package using sam package.
+- Package. When you're satisfied with your Lambda function, bundle the Lambda function, AWS SAM template, and any dependencies into an AWS CloudFormation deployment package using `sam package`.
 
-- Deploy. Deploy the application to the AWS Cloud using sam deploy. At this point, you're able to test your application in the AWS Cloud by invoking it using standard Lambda methods.
+- Deploy. Deploy the application to the AWS Cloud using `sam deploy`. At this point, you're able to test your application in the AWS Cloud by invoking it using standard Lambda methods.
 
 # API Gateway
 
