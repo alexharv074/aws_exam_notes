@@ -113,6 +113,10 @@ Use case for streams:
 
 - How do you set up a relationship across multiple tables in which, based on the value of an item from one table, you update the item in a second table?
 
+## Global tables
+
+DynamoDB global tables provide a fully managed solution for deploying a multi-region, multi-master database, without having to build and maintain your own replication solution.
+
 ## DAX DynamoDB Accelerator
 
 In-Memory Acceleration with DAX. Amazon DynamoDB is designed for scale and performance. In most cases, the DynamoDB response times can be measured in single-digit milliseconds. However, there are certain use cases that require response times in microseconds. For these use cases, DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data.
