@@ -23,6 +23,8 @@ Temporary access to AWS resources
 
 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html
 
+`DecodeAuthorizationMessage()`: Decodes additional information about the authorization status of a request from an encoded message returned in response to an AWS request.
+
 Federation (typically with AD)
 - uses SAML
 - temporary access based on the AD creds. No need to be an IAM user
