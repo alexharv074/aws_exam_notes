@@ -43,9 +43,32 @@ https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
 
 - Avoid using recursive code in your Lambda function, wherein the function automatically calls itself until some arbitrary criteria is met.
 
-## Environment variables
+## Configuration
+
+### Environment variables
 
 Can be used to designate the environment (test, dev etc) for the function. See also https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
+
+### Versioning
+
+By using versioning, you can manage your in-production function code in AWS Lambda better. When you use versioning in AWS Lambda, you can publish one or more versions of your Lambda function. As a result, you can work with different variations of your Lambda function in your development workflow, such as development, beta, and production.
+
+### Aliases
+
+You can create one or more aliases for your Lambda function. An AWS Lambda alias is like a pointer to a specific Lambda function version.
+
+### Traffic-shifting using aliases
+
+To configure an alias to shift traffic between two function versions based on weights by using the CreateAlias operation, you need to configure the routing-config parameter.
+```
+aws lambda create-alias --name alias name --function-name function-name function-version 1 \
+  --routing-config AdditionalVersionWeights={"2"=0.02}
+```
+
+```
+aws lambda update-alias --name alias name --function-name function-name \
+  --routing-config AdditionalVersionWeights={"2"=0.05}
+```
 
 ## Default timeout
 
