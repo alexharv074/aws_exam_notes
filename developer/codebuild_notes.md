@@ -66,3 +66,5 @@ An application specification file (AppSpec file), which is unique to AWS CodeDep
 # AWS CodeStar
 
 AWS CodeStar is a cloud-based service for creating, managing, and working with software development projects on AWS. You can quickly develop, build, and deploy applications on AWS with an AWS CodeStar project. An AWS CodeStar project creates and integrates AWS services for your project development toolchain.
+
+Seems like it's a kind of wrapper around CodeCommit, CodePipeline etc.
