@@ -113,6 +113,12 @@ The following are example scenarios for using CORS:
     * Archive to Glacier (30 days after IA).
     * Permanently delete.
 
+# Server access logging
+
+Server access logging provides detailed records for the requests that are made to a bucket. Server access logs are useful for many applications.
+
+Deleting them: You can use Amazon S3 lifecycle configuration to set rules so that Amazon S3 automatically queues these objects for deletion at the end of their life.
+
 # Security & Encryption
 
 By default buckets are PRIVATE.
