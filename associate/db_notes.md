@@ -119,6 +119,7 @@ Redis
 Exam tips:
 - ElastiCache is a good choice in read-heavy infrequently changing workloads.
 - Redshift better if stress is caused by lots of OLAP transactions.
+- Choose Redis if you need HA.
 
 Good choice for storing session data.
 
