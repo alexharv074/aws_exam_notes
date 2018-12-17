@@ -83,6 +83,19 @@ If your Lambda function code is executing, but you don't see any log data being 
 
 Lambda@Edge is an extension of AWS Lambda, a compute service that lets you execute functions that customize the content that CloudFront delivers.
 
+## SAM
+
+Steps for Using AWS SAM
+The following steps outline how to build a serverless application using AWS SAM:
+
+- Initialize. Download a sample application from template using sam init.
+
+- Test Locally. Test the application locally using sam local invoke and/or sam local start-api. Note that with these commands, even though your Lambda function is invoked locally, it reads from and writes to AWS resources in the AWS Cloud.
+
+- Package. When you're satisfied with your Lambda function, bundle the Lambda function, AWS SAM template, and any dependencies into an AWS CloudFormation deployment package using sam package.
+
+- Deploy. Deploy the application to the AWS Cloud using sam deploy. At this point, you're able to test your application in the AWS Cloud by invoking it using standard Lambda methods.
+
 # API Gateway
 
 ## Set up API Methods in API Gateway
@@ -92,6 +105,10 @@ In API Gateway, an API method embodies a method request and a method response. Y
 ## Deploying an API
 
 To deploy an API, you create an API deployment and associate it with a stage. Each stage is a snapshot of the API and is made available for the client to call. Every time you update an API, which includes modification of methods, integrations, authorizers, and anything else other than stage settings, you must redeploy the API to an existing stage or to a new stage. As your API evolves, you can continue to deploy it to different stages as different versions of the API. You can also deploy your API updates as a canary release deployment, enabling your API clients to access, on the same stage, the production version through the production release, and the updated version through the canary release.
+
+### API Stage
+
+A logical reference to a lifecycle state of your API (for example, 'dev', 'prod', 'beta', 'v2'). API stages are identified by API ID and stage name.
 
 ### Stage variables
 
