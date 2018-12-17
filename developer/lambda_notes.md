@@ -49,6 +49,10 @@ https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
 
 Can be used to designate the environment (test, dev etc) for the function. See also https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html
 
+### Encrypted environment variables
+
+When you create or update Lambda functions that use environment variables, AWS Lambda encrypts them using the AWS Key Management Service.
+
 ### Versioning
 
 By using versioning, you can manage your in-production function code in AWS Lambda better. When you use versioning in AWS Lambda, you can publish one or more versions of your Lambda function. As a result, you can work with different variations of your Lambda function in your development workflow, such as development, beta, and production.
