@@ -169,7 +169,7 @@ Example question:
 > What do you set the read throughput to?
 
 - Size of read to nearest 4KB is 4 / 4 = *1 read unit per item*
-- 10 items = 10
+- 10 items * 1 read unit per item = 10
 - For eventual consistency 10 / 2 = *4 units of read throughput*
 
 ### Write throughput
