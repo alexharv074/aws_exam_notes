@@ -140,3 +140,11 @@ A logical reference to a lifecycle state of your API (for example, 'dev', 'prod'
 ### Stage variables
 
 Stage variables are name-value pairs that you can define as configuration attributes associated with a deployment stage of an API. They act like environment variables and can be used in your API setup and mapping templates.
+
+### CORS for API Gateway
+
+When your API's resources receive requests from a domain other than the API's own domain, you must enable cross-origin resource sharing (CORS) for selected methods on the resource. This amounts to having your API respond to the OPTIONS preflight request with at least the following CORS-required response headers:
+
+- Access-Control-Allow-Methods
+- Access-Control-Allow-Headers
+- Access-Control-Allow-Origin
