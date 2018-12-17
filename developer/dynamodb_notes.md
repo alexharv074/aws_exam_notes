@@ -213,3 +213,10 @@ Creates a new item, or replaces an old item with a new item.
 Amazon DynamoDB offers fully managed encryption at rest. DynamoDB encryption at rest provides enhanced security by encrypting all your data at rest using encryption keys stored in AWS Key Management Service (AWS KMS). This functionality helps reduce the operational burden and complexity involved in protecting sensitive data. With encryption at rest, you can build security-sensitive applications that meet strict encryption compliance and regulatory requirements.
 
 Encrypt at time of table creation.
+
+## Fine-grained access control
+
+In DynamoDB, you have the option to specify conditions when granting permissions using an IAM policy (see Access Control). For example, you can:
+
+- Grant permissions to allow users read-only access to certain items and attributes in a table or a secondary index.
+- Grant permissions to allow users write-only access to certain attributes in a table, based upon the identity of that user.
