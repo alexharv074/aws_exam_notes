@@ -148,3 +148,7 @@ When your API's resources receive requests from a domain other than the API's ow
 - Access-Control-Allow-Methods
 - Access-Control-Allow-Headers
 - Access-Control-Allow-Origin
+
+### Canary release
+
+Canary release is a software development strategy in which a new version of an API (as well as other software) is deployed as a canary release for testing purposes, and the base version remains deployed as a production release for normal operations on the same stage.
