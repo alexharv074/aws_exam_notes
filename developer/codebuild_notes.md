@@ -4,7 +4,7 @@
 
 You can configure access to AWS CodeCommit repositories for IAM users and groups in another AWS account. This is often referred to as cross-account access.
 
-# AWS Codebuild
+# AWS CodeBuild
 
 ## Overview
 
@@ -35,6 +35,11 @@ There are two ways to configure server-side encryption for Amazon S3 artifacts:
 - AWS CodePipeline creates an Amazon S3 artifact bucket and default AWS-managed SSE-KMS encryption keys when you create a pipeline using the Create Pipeline wizard. The master key is encrypted along with object data and managed by AWS.
 
 - You can create and manage your own customer-managed SSE-KMS keys.
+
+## Cross-account
+
+- Create a Code Pipeline instance in another account
+- Add a cross-account role
 
 # AWS CodeDeploy
 
