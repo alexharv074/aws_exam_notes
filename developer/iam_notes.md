@@ -57,6 +57,14 @@ Exam scenarios:
 
 ---
 
+# IAM Policy Simulator
+
+Policy simulator commands typically require calling API operations to do two things:
+
+- Evaluate the policies and return the list of context keys that they reference. You need to know what context keys are referenced so that you can supply values for them in the next step.
+
+- Simulate the policies (`aws iam simulate-custom-policy`), providing a list of actions, resources, and context keys that are used during the simulation.
+
 # AD Federation
 
 Need to know the flow. To do. Cloud Guru slide is too confusing.
