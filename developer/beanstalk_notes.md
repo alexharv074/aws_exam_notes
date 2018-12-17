@@ -44,3 +44,7 @@ Each time you upload a new version of your application with the Elastic Beanstal
 ## Custom platform
 
 You create your own Elastic Beanstalk platform using Packer, which is an open-source tool for creating machine images for many platforms, including AMIs for use with Amazon EC2.
+
+## cron.yaml
+
+For periodic background tasks.
