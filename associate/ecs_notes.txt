@@ -10,3 +10,5 @@ ECR
 ECS Task definition
 - JSON file that describes 1 or more containers
 - includes: docker image ; CPU & mem ; linking of containers
+
+Security Groups and networks ACLs allow you to control inbound and outbound network access to and from your instances.
