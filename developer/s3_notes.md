@@ -146,9 +146,7 @@ Server-side:
 
 Encryption is AES-256.
 
-Client-side:
-
-You encrypt the data on your side then upload it.
+Enforcing:
 
 You can specify a condition in the bucket policy to enforce encryption:
 
@@ -159,6 +157,22 @@ You can specify a condition in the bucket policy to enforce encryption:
   }
 }
 ```
+
+This will deny permission to upload an object if the header does NOT include x-amz-server-side-encryption.
+
+Enforcing MFA:
+
+```json
+"Condition": {
+  "BoolIfExists": {
+    "aws:MultiFactorAuthPresent": "false"
+  }
+}
+```
+
+Client-side:
+
+You encrypt the data on your side then upload it.
 
 # Storage Gateway
 
