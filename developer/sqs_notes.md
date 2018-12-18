@@ -42,3 +42,8 @@ Use SNS topics to fan out to multiple SQS queues.
 ## Message retention
 
 You can use the *MessageRetentionPeriod* attribute to set the message retention period from 60 seconds (1 minute) to 1,209,600 seconds (14 days). Default is 4 days. Use *SetQueueAttributes* action.
+
+## Reducing costs
+
+- Batch messages using the Batch API
+- use Long Polling to consume messages as soon as they become available.
