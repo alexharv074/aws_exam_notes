@@ -54,3 +54,8 @@ Shards:
 A shard is a uniquely identified sequence of data records in a stream. A stream is composed of one or more shards, each of which provides a fixed unit of capacity.
 
 You can guarantee ordering within a shard but not across multiple shards.
+
+Encryption in Firehose:
+
+- Enable SSE in Firehose
+- Ensure that the data source is a Kinesis Stream.
