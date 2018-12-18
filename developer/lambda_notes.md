@@ -156,3 +156,21 @@ When your API's resources receive requests from a domain other than the API's ow
 ### Canary release
 
 Canary release is a software development strategy in which a new version of an API (as well as other software) is deployed as a canary release for testing purposes, and the base version remains deployed as a production release for normal operations on the same stage.
+
+## Authorisation
+
+Three methods:
+
+- IAM roles
+- Lambda authorizers
+- Cognito User Pools
+
+### Lambda authorizer
+
+An API Gateway Lambda authorizer (formerly known as a custom authorizer) is a Lambda function that you provide to control access to your API methods.
+
+### Cognito User Pools
+
+As an alternative to using IAM roles and policies or Lambda authorizers (formerly known as custom authorizers), you can use an Amazon Cognito user pool to control who can access your API in Amazon API Gateway.
+
+To use an Amazon Cognito user pool with your API, you must first create an authorizer of the COGNITO_USER_POOLS type and then configure an API method to use that authorizer.
