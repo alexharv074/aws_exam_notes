@@ -35,6 +35,10 @@ Long polling waits for the message to arrive or for the long poll timeout to end
 
 Max long poll timeout = 20 s.
 
+## Delay queues
+
+Delay queues let you postpone the delivery of new messages to a queue for a number of seconds.
+
 ## SQS Fanning Out
 
 Use SNS topics to fan out to multiple SQS queues.
