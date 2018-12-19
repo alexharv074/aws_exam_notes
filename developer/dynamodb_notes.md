@@ -223,3 +223,17 @@ In DynamoDB, you have the option to specify conditions when granting permissions
 
 - Grant permissions to allow users read-only access to certain items and attributes in a table or a secondary index.
 - Grant permissions to allow users write-only access to certain attributes in a table, based upon the identity of that user.
+
+## Common errors
+
+This section lists the errors common to the API actions of all AWS services. For errors specific to an API action for this service, see the topic for that API action.
+
+AccessDeniedException
+You do not have sufficient access to perform this action.
+
+HTTP Status Code: 400
+
+IncompleteSignature
+The request signature does not conform to AWS standards.
+
+HTTP Status Code: 400
