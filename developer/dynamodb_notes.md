@@ -135,6 +135,9 @@ To reverse the order, set the *ScanIndexForward* parameter to false.
 *ConsistentRead*
 Determines the read consistency model: If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads.
 
+*ReturnConsumedCapacity*
+Set to TOTAL or INDEX to find out about consumed capacity.
+
 ### Scan
 
 Scan examines every item in the table. But can use *ProjectionExpression* to limit it.
