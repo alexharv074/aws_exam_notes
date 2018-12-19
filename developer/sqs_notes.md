@@ -47,6 +47,10 @@ Use SNS topics to fan out to multiple SQS queues.
 
 You can use the *MessageRetentionPeriod* attribute to set the message retention period from 60 seconds (1 minute) to 1,209,600 seconds (14 days). Default is 4 days. Use *SetQueueAttributes* action.
 
+## Message attributes
+
+SQS lets you include structured metadata (such as timestamps, geospatial data, signatures, and identifiers) with messages using message attributes.
+
 ## Reducing costs
 
 - Batch messages using the Batch API
