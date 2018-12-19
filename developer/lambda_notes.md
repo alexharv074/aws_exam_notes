@@ -88,6 +88,24 @@ Here are some of the key features of AWS Step Functions:
 - You define state machines using the JSON-based Amazon States Language.
 - The Step Functions console displays a graphical view of your state machine's structure, which provides you with a way to visually check your state machine's logic and monitor executions.
 
+### Activities, Workers and Tasks
+
+Activities are an AWS Step Functions feature that enables you to have a task in your state machine where the work is performed by a worker that can be hosted on EC2, ECS, mobile devices etc.
+
+All work in your state machine is done by tasks. A task performs work by using an activity, a Lambda function, or by passing parameters to the API actions of other services.
+
+In AWS Step Functions, activities are a way to associate code running somewhere (known as an activity worker) with a specific task in a state machine.
+
+### Best practices
+
+Topics
+
+- Use Timeouts to Avoid Stuck Executions
+- Use ARNs Instead of Passing Large Payloads
+- Avoid Reaching the History Limit
+- Handle Lambda Service Exceptions
+- Avoid Latency When Polling for Activity Tasks
+
 ## Debugging
 
 ### Logging statements
