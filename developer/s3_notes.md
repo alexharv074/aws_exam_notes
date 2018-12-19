@@ -226,3 +226,9 @@ Required configurations:
 # Transfer acceleration
 
 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.
+
+# Troubleshooting
+
+## "The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint."
+
+It seems likely that this bucket was created in a different region. https://stackoverflow.com/a/26725760/3787051
