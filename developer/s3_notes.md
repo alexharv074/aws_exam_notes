@@ -222,3 +222,7 @@ Required configurations:
 - Enabling Website Hosting
 - Configuring Index Document Support
 - Permissions Required for Website Access (i.e. bucket policies)
+
+# Transfer acceleration
+
+Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.
